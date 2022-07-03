@@ -1,9 +1,8 @@
 <script setup>
+
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "@/components/HelloWorld.vue";
-// import HelloWorld from "./components/HelloWorld.vue";
-
-HelloWorld.count = 0;
+import CountButton from "./components/CountButton.vue";
 
 </script>
 
@@ -19,6 +18,7 @@ HelloWorld.count = 0;
 
     <div class="wrapper">
       <HelloWorld msg="You sure did it!" />
+      <CountButton></CountButton>
 
       <nav>
         <RouterLink to="/">Home</RouterLink>

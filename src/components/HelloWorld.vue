@@ -1,15 +1,13 @@
 <script setup>
+
 defineProps({
   msg: {
     type: String,
     required: true,
   },
-  count: {
-    type: Number,
-    required: true,
-    value: 0,
-  }
 });
+
+  
 </script>
 
 <template>
