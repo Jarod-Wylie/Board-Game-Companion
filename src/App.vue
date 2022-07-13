@@ -22,6 +22,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/helloworld">Hellow World</RouterLink>
         <RouterLink to="/countingcomponents">Counting Components</RouterLink>
+        <RouterLink to="/forminputcomponents">Form Input Components</RouterLink>
       </nav>
     </div>
   </header>
