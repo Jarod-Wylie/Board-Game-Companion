@@ -10,7 +10,7 @@ function incrementCount () {
 </script>
 
 <template>
-    <button @click="count++">new count {{ msg }}... {{count}}</button>
+    <button @click="count++">new count: {{count}}</button>
 </template>
 
 <style scoped>

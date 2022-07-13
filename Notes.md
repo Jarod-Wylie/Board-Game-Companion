@@ -12,6 +12,16 @@
     2. In the template tag of main app view add the file name of the component as a tag. (such as <CountButton></CountButton>)
     
 
+## Git Notes
+### General Work Flow
+1. Create feature branch with: git checkout -b "NewBranch"
+2. Push branch to remote with: git push -u origin NewBranch
+2. Make small but real progress.
+3. Add all changes with: git add .
+4. Commit change with comment describing the change: git commit -m "What was accomplished"
+5. Push to remote branch with: git push -u origin NewBranch
+
+
 
 
 ## Other Thoughts
