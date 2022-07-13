@@ -1,12 +1,12 @@
 <script setup>
-import CountButton from "../components/CountButton.vue";
+import UserNameInput from "../components/UserNameInput.vue";
 
 </script>
 
 <template>
   <div class="about">
     <h1>This page displays components related to form input.</h1>
-  <!-- <UserNameInput></UserNameInput> -->
+  <UserNameInput></UserNameInput>
   </div>
 </template>
 
