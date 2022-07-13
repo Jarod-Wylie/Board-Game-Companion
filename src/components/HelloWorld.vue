@@ -11,13 +11,9 @@ defineProps({
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+  <div class="helloWorld">
     <h3>
-      You’ve successfully created a project with. hey mom
-      <a target="_blank" href="https://vitejs.dev/">Vite</a> +
-      <a target="_blank" href="https://vuejs.org/">Vue 3</a>.
-      <button>count {{ msg }}... {{count}}</button>
+        Hello World
     </h3>
   </div>
 </template>
@@ -33,14 +29,14 @@ h3 {
   font-size: 1.2rem;
 }
 
-.greetings h1,
-.greetings h3 {
+.helloWord h1,
+.helloWorld h3 {
   text-align: center;
 }
 
 @media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
+  .helloWorld h1,
+  .helloWorld h3 {
     text-align: left;
   }
 }
