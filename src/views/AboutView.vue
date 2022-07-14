@@ -19,4 +19,9 @@ import HelloWorld from "../components/HelloWorld.vue";
     align-items: center;
   }
 }
+
+h1
+{
+  text-align: center;
+}
 </style>

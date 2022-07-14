@@ -47,6 +47,7 @@ header {
   /* max-height: 100vh; */
   top: 0px;
   position: sticky;
+  text-align: center;
 }
 
 .logo {
@@ -107,6 +108,7 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items:top;
+    text-align: center;
     padding-right: calc(var(--section-gap) / 2);
   }
 
@@ -114,6 +116,7 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    text-align: center;
   }
 
   .logo {

@@ -22,7 +22,7 @@
 5. Push to remote branch with: git push -u origin NewBranch
 
 - How do you abandon all changes to a branch since the last commit?
-    - git reet HEAD --hard
+    - git reset HEAD --hard
 
 
 
