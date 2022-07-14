@@ -2,10 +2,12 @@
 
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "@/components/HelloWorld.vue";
+import Title from "@/components/Title.vue";
 
 </script>
 
 <template>
+<Title></Title>
   <header>
     <img
       alt="Vue logo"
