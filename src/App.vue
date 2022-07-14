@@ -1,14 +1,13 @@
 <script setup>
 
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
 import Title from "@/components/Title.vue";
 
 </script>
 
 <template>
-<Title></Title>
   <header>
+    <Title></Title>
     <img
       alt="Vue logo"
       class="logo"
@@ -17,16 +16,17 @@ import Title from "@/components/Title.vue";
       height="125"
     />
 
-    <div class="wrapper">
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/helloworld">Hellow World</RouterLink>
+        <RouterLink to="/helloworld">Hello World</RouterLink>
         <RouterLink to="/countingcomponents">Counting Components</RouterLink>
       </nav>
-    </div>
   </header>
+
+
+
+
 
   <RouterView />
 </template>
@@ -34,17 +34,19 @@ import Title from "@/components/Title.vue";
 <style>
 @import "@/assets/base.css";
 
-#app {
+/* #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
 
   font-weight: normal;
-}
+} */
 
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+  line-height: 1;
+  /* max-height: 100vh; */
+  top: 0px;
+  position: sticky;
 }
 
 .logo {
@@ -104,7 +106,7 @@ nav a:first-of-type {
 
   header {
     display: flex;
-    place-items: center;
+    place-items:top;
     padding-right: calc(var(--section-gap) / 2);
   }
 

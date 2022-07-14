@@ -11,7 +11,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="helloWorld">
+  <div class="Title">
     <h1>
         My VUE Sandbox
     </h1>
@@ -29,14 +29,14 @@ h3 {
   font-size: 1.2rem;
 }
 
-.helloWord h1,
-.helloWorld h3 {
+.title h1,
+.title h3 {
   text-align: center;
 }
 
 @media (min-width: 1024px) {
   .helloWorld h1,
-  .helloWorld h3 {
+  .title h3 {
     text-align: left;
   }
 }
