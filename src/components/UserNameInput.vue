@@ -1,12 +1,11 @@
 <script setup>
 import { ref } from 'vue'
 
-var count = ref(0)
-  
+
 </script>
 
 <template>
-    <button @click="count++">new count: {{count}}</button>
+   <input placeholder="User Name"/>
 </template>
 
 <style scoped>

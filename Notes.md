@@ -20,6 +20,10 @@
 3. Add all changes with: git add .
 4. Commit change with comment describing the change: git commit -m "What was accomplished"
 5. Push to remote branch with: git push -u origin NewBranch
+------
+#### Once finished with feature branch.
+6. Delete local branch with git branch -d localBranch
+7. Delete remote branch wiht git push origin --delete localBranch
 
 - How do you abandon all changes to a branch since the last commit?
     - git reset HEAD --hard
