@@ -21,6 +21,7 @@ import Title from "@/components/Title.vue";
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/helloworld">Hello World</RouterLink>
         <RouterLink to="/countingcomponents">Counting Components</RouterLink>
+        <RouterLink to="/forminputcomponents">Form Input Components</RouterLink>
       </nav>
   </header>
 
