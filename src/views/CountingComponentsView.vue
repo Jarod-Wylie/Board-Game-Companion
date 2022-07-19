@@ -11,9 +11,11 @@ import RowContainer from "@/components/RowContainer.vue";
 <RowContainer>
   <CountButton></CountButton>
 </RowContainer>
+
 <RowContainer>
   <CountButton></CountButton>
 </RowContainer>
+
 </template>
 
 <style>

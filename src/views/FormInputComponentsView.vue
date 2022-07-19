@@ -1,13 +1,14 @@
 <script setup>
 import UserNameInput from "../components/UserNameInput.vue";
+import RowContainer from "../components/RowContainer.vue";
 
 </script>
 
 <template>
-  <div class="about">
-    <h1>This page displays components related to form input.</h1>
-  <UserNameInput></UserNameInput>
-  </div>
+  <h1>This page displays components related to form input.</h1>
+  <RowContainer>
+    <UserNameInput></UserNameInput>
+  </RowContainer>
 </template>
 
 <style>

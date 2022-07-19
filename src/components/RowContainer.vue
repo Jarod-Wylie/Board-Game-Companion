@@ -21,7 +21,7 @@ defineProps({
 .row
 {
     text-align: center;
-    /* padding-left: 200px; */
+    padding-top: 10px;
 }
 
 </style>
