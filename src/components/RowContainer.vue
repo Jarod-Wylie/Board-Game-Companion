@@ -1,7 +1,7 @@
 <script setup>
 
 defineProps({
-  msg: {
+  title: {
     type: String,
     required: true,
   },
@@ -11,13 +11,18 @@ defineProps({
 </script>
 
 <template>
-  <div class="helloWorld">
-    <h3>
-        Hello World
-    </h3>
+  <div class="row">
+      <slot> </slot>
   </div>
 </template>
 
 <style scoped>
 
+.row
+{
+    text-align: center;
+    /* padding-left: 200px; */
+}
+
 </style>
+

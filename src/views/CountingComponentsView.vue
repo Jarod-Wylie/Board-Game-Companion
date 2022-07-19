@@ -1,21 +1,25 @@
 <script setup>
 import CountButton from "../components/CountButton.vue";
+import RowContainer from "@/components/RowContainer.vue";
 
 </script>
 
 <template>
-  <div class="about">
-    <h1>This page displays components I have made that counts something.</h1>
+
+    <h2>This page displays components I have made that counts something.</h2>
+
+<RowContainer>
   <CountButton></CountButton>
-  </div>
+</RowContainer>
+<RowContainer>
+  <CountButton></CountButton>
+</RowContainer>
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+h2
+{
+  padding-top: 10px;
+  text-align: center;
 }
 </style>

@@ -3,6 +3,7 @@
 import { RouterLink, RouterView } from "vue-router";
 import Title from "@/components/Title.vue";
 
+
 </script>
 
 <template>
@@ -27,9 +28,10 @@ import Title from "@/components/Title.vue";
 
 
 
+<body>
+    <RouterView />
+</body>
 
-
-  <RouterView />
 </template>
 
 <style>
