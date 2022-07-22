@@ -21,7 +21,12 @@ defineProps({
 .row
 {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 20px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 1000px;
 }
 
 </style>

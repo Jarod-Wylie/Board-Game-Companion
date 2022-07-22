@@ -1,4 +1,4 @@
-## Default app view is TheWelcome.vue file.
+## General VUE Notes
 - How do you point to another app view file as the landing page?
     1.  Add the component at C:\Users\Jarod Wylie\Board-Game-Companion-In-VUE\src\router\index.js
 - How do you create simple "count" variable and click a button to increase the value?
@@ -10,6 +10,7 @@
         - In the script import vue app: add first part of file name and indicate location of the vue file.
             -  Such as: (import CountButton from "./components/CountButton.vue";)
     2. In the template tag of main app view add the file name of the component as a tag. (such as <CountButton></CountButton>)
+- An Example of using the slot element can be found at C:\Users\Jarod Wylie\Board-Game-Companion-In-VUE\src\components\RowContainer.vue
     
 
 ## Git Notes
