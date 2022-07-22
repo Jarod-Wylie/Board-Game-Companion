@@ -5,29 +5,26 @@ import { ref } from 'vue'
 </script>
 
 <template>
-   <input placeholder="User Name"/>
+   <input class="input-1" placeholder="User Name"/>
 </template>
 
 <style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  top: -10px;
-}
 
-h3 {
-  font-size: 1.2rem;
+input:focus 
+{
+  outline-color: rgb(136, 191, 236);
 }
-
-.greetings h1,
-.greetings h3 {
+.input-1
+{
+  width: 20%;
+  height: 40px;
+  box-shadow: inset 0 1px 4px rgb(0 0 0 / 10%), 0 0 0 transparent;
+  background-color: rgb(224, 232, 235);
+  border:0;
+  border-width: 10px;
+  font-size:18px;
   text-align: center;
+  
 }
 
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
-}
 </style>
