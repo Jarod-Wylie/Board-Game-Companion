@@ -20,7 +20,8 @@ defineProps({
     <div class="row">
       <UserNameInput></UserNameInput>
     </div>
-    <div id="password-row" class="row">
+
+    <div class="row">
       <PasswordInput></PasswordInput>
     </div>
 
@@ -37,13 +38,26 @@ defineProps({
 </template>
 
 <style scoped>
+  .Sign-In-Box
+  {
+      display: inline-block;
+      text-align: center;
+      /* padding-top: 20px; */
+      margin-top: 10px;
+      width: 700px;
+      /* margin-left: 300px;
+      margin-right: 300px; */
+      padding-bottom: 20px;
+      border-style: solid;
+      border-color: white;
+      box-shadow: 5px 5px 10px rgb(83, 83, 83);
+    
+  }
 
 h1
 {
   font-size: 40;
   font-weight: bold;
-  /* text-align: left; */
-  /* padding-left: 400px; */
   padding-bottom: 20px;
 }
 
@@ -56,21 +70,6 @@ h1
 {
   padding-top: 10px;
   padding-left: 300px;
-}
-.Sign-In-Box
-{
-    display: inline-block;
-    text-align: center;
-    /* padding-top: 20px; */
-    margin-top: 10px;
-    width: 700px;
-    /* margin-left: 300px;
-    margin-right: 300px; */
-    padding-bottom: 20px;
-    border-style: solid;
-    border-color: white;
-    box-shadow: 5px 5px 10px rgb(83, 83, 83);
-  
 }
 
 </style>

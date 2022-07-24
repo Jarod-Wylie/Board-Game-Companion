@@ -1,6 +1,7 @@
 <script setup>
 import UserNameInput from "../components/UserNameInput.vue";
 import RowContainer from "../components/RowContainer.vue";
+import SignInBox from "../components/SignInBox.vue";
 
 </script>
 
@@ -8,6 +9,9 @@ import RowContainer from "../components/RowContainer.vue";
   <h1>This page displays components related to form input.</h1>
   <RowContainer>
     <UserNameInput></UserNameInput>
+  </RowContainer>
+  <RowContainer>
+    <SignInBox></SignInBox>
   </RowContainer>
 </template>
 
