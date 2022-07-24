@@ -1,6 +1,7 @@
 <script setup>
 import UserNameInput from './UserNameInput.vue';
 import PasswordInput from './PasswordInput.vue';
+import LogInButton from './LogInButton.vue';
 
 defineProps({
   title: {
@@ -20,6 +21,10 @@ defineProps({
     <div id="password-row" class="row">
       <PasswordInput></PasswordInput>
     </div>
+
+    <div id="button-row" class="row">
+      <LogInButton></LogInButton>
+    </div>
   </div>
 </template>
 
@@ -28,6 +33,12 @@ defineProps({
 #password-row
 {
   padding-top: 10px;
+}
+
+#button-row
+{
+  padding-top: 10px;
+  padding-left: 300px;
 }
 .Sign-In-Box
 {
