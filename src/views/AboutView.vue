@@ -6,11 +6,19 @@ import SignInBox from '../components/SignInBox.vue';
 
   <h1>This is an about page</h1>
 
+<div id="content">
   <SignInBox></SignInBox>
+</div>
 
 </template>
 
 <style>
+
+#content
+{
+  text-align: center;
+}
+
 
 h1
 {

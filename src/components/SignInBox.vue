@@ -15,6 +15,8 @@ defineProps({
 
 <template>
   <div class="Sign-In-Box">
+    <h1>Welcome Back</h1>
+
     <div class="row">
       <UserNameInput></UserNameInput>
     </div>
@@ -30,6 +32,14 @@ defineProps({
 
 <style scoped>
 
+h1
+{
+  font-size: 40;
+  text-align: left;
+  padding-left: 400px;
+  padding-bottom: 20px;
+}
+
 #password-row
 {
   padding-top: 10px;
@@ -42,13 +52,18 @@ defineProps({
 }
 .Sign-In-Box
 {
+    display: inline-block;
     text-align: center;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     margin-top: 10px;
+    width: 1000px;
+    /* margin-left: 300px;
+    margin-right: 300px; */
     padding-bottom: 20px;
     border-style: solid;
-    border-color: gray;
-    border-radius: 1000px;
+    border-color: white;
+    box-shadow: 5px 5px 10px rgb(83, 83, 83);
+  
 }
 
 </style>
