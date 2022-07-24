@@ -5,7 +5,7 @@ import { ref } from 'vue'
 </script>
 
 <template>
-   <input class="input-1" placeholder="User Name"/>
+   <input class="input-1" placeholder="Password"/>
 </template>
 
 <style scoped>
