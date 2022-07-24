@@ -24,6 +24,12 @@ defineProps({
       <PasswordInput></PasswordInput>
     </div>
 
+    <div id="forgot-password-row" class="row">
+      <a>
+          Forgot your password?  
+      </a>  
+    </div>
+
     <div id="button-row" class="row">
       <LogInButton></LogInButton>
     </div>
@@ -35,8 +41,9 @@ defineProps({
 h1
 {
   font-size: 40;
-  text-align: left;
-  padding-left: 400px;
+  font-weight: bold;
+  /* text-align: left; */
+  /* padding-left: 400px; */
   padding-bottom: 20px;
 }
 
@@ -56,7 +63,7 @@ h1
     text-align: center;
     /* padding-top: 20px; */
     margin-top: 10px;
-    width: 1000px;
+    width: 700px;
     /* margin-left: 300px;
     margin-right: 300px; */
     padding-bottom: 20px;

@@ -16,7 +16,7 @@ input:focus
 }
 .input-1
 {
-  width: 20%;
+  width: 50%;
   height: 40px;
   box-shadow: inset 0 1px 4px rgb(0 0 0 / 10%), 0 0 0 transparent;
   background-color: rgb(224, 232, 235);
