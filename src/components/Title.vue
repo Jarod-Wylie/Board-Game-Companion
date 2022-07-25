@@ -13,7 +13,7 @@ defineProps({
 <template>
   <div class="title">
     <h1>
-        My VUE Sandbox
+        Board Game Companion
     </h1>
   </div>
 </template>
