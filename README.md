@@ -27,6 +27,12 @@ npm run dev
 ```sh
 npm run build
 ```
+### Compile and Local Development for Firebase
+firebase serve
+
+### Deploy with Firebase
+npm run build
+firebase deploy
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
