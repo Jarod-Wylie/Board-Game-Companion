@@ -1,11 +1,22 @@
-<script setup>
+<script  >
 
-defineProps({
-  msg: {
-    type: String,
-    required: true,
-  },
-});
+// import { firestorePlugin } from 'vuefire'
+
+
+// import { db } from './db'
+
+// Vue.use(firestorePlugin)
+// export default {
+//   data() {
+//     return {
+//       users: [],
+//     }
+//   },
+
+//   firestore: {
+//     users: db.collection('users'),
+//   },
+// }
 
   
 </script>

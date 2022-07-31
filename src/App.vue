@@ -1,8 +1,56 @@
-<script setup>
+<script setup >
 
 import { RouterLink, RouterView } from "vue-router";
 import Title from "@/components/Title.vue";
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { ref } from 'vue'
 
+// const firebaseConfig = {
+//   apiKey: "AIzaSyD9SUohpF_TVy_dqFX-no-2ZBOl8YKmB8Q",
+//   authDomain: "board-game-companio.firebaseapp.com",
+//   databaseURL: "https://board-game-companio-default-rtdb.firebaseio.com",
+//   projectId: "board-game-companio",
+//   storageBucket: "board-game-companio.appspot.com",
+//   messagingSenderId: "408109557278",
+//   appId: "1:408109557278:web:4e84d110280ddb72dd700f",
+//   measurementId: "G-5TT75JM4QR"
+// };
+
+// const app = initializeApp(firebaseConfig);
+// const dbBlah = getFirestore(app);
+
+// async function getCities(db) {
+//   const citiesCol = collection(db, 'users');
+//   const citySnapshot = await getDocs(citiesCol);
+//   const cityList = citySnapshot.docs.map(doc => doc.data());
+//   console.log(cityList[0].UserName)
+//   blah = cityList[0].UserName
+//   return cityList;
+// }
+
+// var blah = ref(0)
+
+// Vue.use(firestorePlugin)
+
+  // readEmployees() 
+  // {
+  //     this.employeesData = [];
+  //     db.collection("employees")
+  //       .get()
+  //       .then((querySnapshot) => {
+  //         querySnapshot.forEach((doc) => {
+  //           this.employeesData.push({
+  //             id: doc.id,
+  //             name: doc.data().UserName
+  //           });
+  //           console.log(doc.id, " => ", doc.data());
+  //         });
+  //       })
+  //       .catch((error) => {
+  //         console.log("Error getting documents: ", error);
+  //       });
+  //   }
 
 </script>
 
@@ -19,6 +67,8 @@ import Title from "@/components/Title.vue";
       </nav>
   </header>
 
+<button @click="blah++">adsf</button>
+<button @click="getCities(dbBlah)">test {{blah}}</button>
 
 
 <body>
