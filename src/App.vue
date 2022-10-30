@@ -64,6 +64,7 @@ import { ref } from 'vue'
         <RouterLink to="/helloworld">Hello World</RouterLink>
         <RouterLink to="/countingcomponents">Counting Components</RouterLink>
         <RouterLink to="/forminputcomponents">Form Input Components</RouterLink>
+        <RouterLink to="/generatecard">Generate Card</RouterLink>
       </nav>
   </header>
 
