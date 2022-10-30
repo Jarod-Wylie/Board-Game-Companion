@@ -7,6 +7,7 @@ var count = ref(0)
 
 <template>
     <button @click="count++">new count: {{count}}</button>
+    <h2>{{count}}</h2>
 </template>
 
 <style scoped>
