@@ -1,5 +1,6 @@
 <script setup>
     import UserNameInput from "../components/UserNameInput.vue";
+    import RowContainerWithColor from "../components/RowContainerWithColor.vue";
     import RowContainer from "../components/RowContainer.vue";
     import SignInBox from "../components/SignInBox.vue";
     import { onMounted, ref } from 'vue';
@@ -36,6 +37,7 @@
         var DenyAdditionalRule = '';
         var AdditionalRule1 = '';
         var AdditionalRule2 = '';
+        var cssColoredText = 'color: red'
         
         // probablitly of presenting a rule
         var probablitlyValue = Math.floor(Math.random() * 100);
@@ -49,23 +51,23 @@
         
         // Randomly Select priority of the Deny Type choice
         var priority = Math.floor(Math.random() * 3);
-        ChoiceArray.value[priority] = {Type: 'Deny', Priority: priority, Choice: 'a. ', HPEffect: DenyHPEffect, Color: 'RED', ValuePoints: DenyValuePoints, Description: 'Deny it is happening', AddtionalRules:''}
+        ChoiceArray.value[priority] = {Type: 'Deny', Priority: priority, Choice: 'a. ', HPEffect: DenyHPEffect, cssColoredText: 'color: red', Color: 'RED', ValuePoints: DenyValuePoints, Description: 'Deny it is happening', AddtionalRules:''}
 
         // Priority of the other two choices is conditional to the Deny choice priority
         if(priority == 0)
         {
-            ChoiceArray.value[1] = {Type: 'choicetypePlaceholder', Priority: priority, Choice: 'a. ', HPEffect: HPEffect1, Color: 'RED', ValuePoints: ValuePoints1, Description: '[Placholder1]', AddtionalRules: DenyAdditionalRule} 
-            ChoiceArray.value[2] = {Type: 'choicetypePlaceholder', Priority: priority, Choice: 'a. ', HPEffect: HPEffect2, Color: 'BLUE', ValuePoints: ValuePoints2, Description: '[Placholder2]', AddtionalRules:''} 
+            ChoiceArray.value[1] = {Type: 'choicetypePlaceholder', Priority: priority, Choice: 'a. ', HPEffect: HPEffect1, cssColoredText: 'color: red', Color: 'RED', ValuePoints: ValuePoints1, Description: '[Placholder1]', AddtionalRules: DenyAdditionalRule} 
+            ChoiceArray.value[2] = {Type: 'choicetypePlaceholder', Priority: priority, Choice: 'a. ', HPEffect: HPEffect2, cssColoredText: 'color: Blue', Color: 'BLUE', ValuePoints: ValuePoints2, Description: '[Placholder2]', AddtionalRules:''} 
         }
         if(priority == 1)
         {
-            ChoiceArray.value[2] = {Type: 'choicetypePlaceholder', Priority: priority, Choice: 'a. ', HPEffect: HPEffect1, Color: 'YELLOW', ValuePoints: ValuePoints1, Description: '[Placholder1]', AddtionalRules:''} 
-            ChoiceArray.value[0] = {Type: 'choicetypePlaceholder', Priority: priority, Choice: 'a. ', HPEffect: HPEffect2, Color: 'PURPLE', ValuePoints: ValuePoints2, Description: '[Placholder2]', AddtionalRules:''} 
+            ChoiceArray.value[2] = {Type: 'choicetypePlaceholder', Priority: priority, Choice: 'a. ', HPEffect: HPEffect1, cssColoredText: 'color: rgb(184, 168, 27)', Color: 'YELLOW', ValuePoints: ValuePoints1, Description: '[Placholder1]', AddtionalRules:''} 
+            ChoiceArray.value[0] = {Type: 'choicetypePlaceholder', Priority: priority, Choice: 'a. ', HPEffect: HPEffect2, cssColoredText: 'color: rgb(225, 0, 255)', Color: 'PURPLE', ValuePoints: ValuePoints2, Description: '[Placholder2]', AddtionalRules:''} 
         }
         if(priority == 2)
         {
-            ChoiceArray.value[0] = {Type: 'choicetypePlaceholder', Priority: priority, Choice: 'a. ', HPEffect: HPEffect1, Color: 'BLUE', ValuePoints: ValuePoints1, Description: '[Placholder1]', AddtionalRules:''} 
-            ChoiceArray.value[1] = {Type: 'choicetypePlaceholder', Priority: priority, Choice: 'a. ', HPEffect: HPEffect2, Color: 'RED', ValuePoints: ValuePoints2, Description: '[Placholder2]', AddtionalRules:''} 
+            ChoiceArray.value[0] = {Type: 'choicetypePlaceholder', Priority: priority, Choice: 'a. ', HPEffect: HPEffect1, cssColoredText: 'color: Blue', Color: 'BLUE', ValuePoints: ValuePoints1, Description: '[Placholder1]', AddtionalRules:''} 
+            ChoiceArray.value[1] = {Type: 'choicetypePlaceholder', Priority: priority, Choice: 'a. ', HPEffect: HPEffect2, cssColoredText: 'color: Red', Color: 'RED', ValuePoints: ValuePoints2, Description: '[Placholder2]', AddtionalRules:''} 
         }
         console.log(ChoiceArray)
     }
@@ -75,24 +77,31 @@
     
     <template>
       <h1>Generate Card</h1>
-      <RowContainer>
+      <RowContainerWithColor>
+        <h2>Pandemic </h2>
         <!-- <UserNameInput></UserNameInput> -->
-        <h1>Pandemic </h1>
         <ol type="A"> 
             <li v-for="item in ChoiceArray "
              v-bind:key="item.Priority"> 
-                    {{item.Choice}} 
+                    <!-- {{item.Choice}}  -->
                     {{item.Description}} 
-                    | World Health - {{item.HPEffect}} 
-                    | {{item.Color}} + {{item.ValuePoints}}
-                    | {{item.AddtionalRules}}
+                    <ul style="list-style-type: lower-roman; padding-bottom: 0;">
+                      <li>World Health - {{item.HPEffect}}                         
+                      </li>
+                      <li>
+                        <a :style="item.cssColoredText">{{item.Color}}</a> + {{item.ValuePoints}}                     
+                      </li>
+                      <li>
+                        {{item.AddtionalRules}}
+                      </li>
+                    </ul>
             </li>
         </ol>
         <!-- <li v-for="items in ChoiceArray">a. {{ChoiceArray[0].Description}} {{ChoiceArray[0].Priority}} 
             <li>World Health: -{{ChoiceArray[0].HPEffect}}</li>
         </li> -->
 
-      </RowContainer>
+      </RowContainerWithColor>
       <RowContainer>
         <!-- <SignInBox></SignInBox> -->
         <button @click="assign()">Generate New Card</button>
@@ -107,16 +116,18 @@
             align-items: center;
           }
           ol{
-            text-align: center;
-          }
-          ol{
-            text-align: center;
+            padding-top:5pc;
           }
           li{
             text-align: center;
           }
+          .ColoredText {
+            color: rgb(184, 168, 27);
+          }
         }
 
-
+        h2 {
+          text-align: center;
+        }
     </style>
     

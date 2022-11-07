@@ -5,7 +5,7 @@
     - Normally you would put it in the data () {}, but with "script setup" I think that has changed. Adding count as just a variable for now.
     - still cannot just presss button to increment.
         - Reactivity of a variable is expressed by ref()
-- How do you add a component to a page?
+- How do you add a new component to a page?
     1. In the main app view: C:\Users\Jarod Wylie\Board-Game-Companion-In-VUE\src\App.vue,
         - In the script import vue app: add first part of file name and indicate location of the vue file.
             -  Such as: (import CountButton from "./components/CountButton.vue";)
