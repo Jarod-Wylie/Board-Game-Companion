@@ -104,7 +104,7 @@
       </RowContainerWithColor>
       <RowContainer>
         <!-- <SignInBox></SignInBox> -->
-        <button @click="assign()">Generate New Card</button>
+        <button id='Generate-Button' @click="assign()">Generate New Card</button>
       </RowContainer>
     </template>
     
@@ -128,6 +128,12 @@
 
         h2 {
           text-align: center;
+        }
+
+        #Generate-Button {
+          width: 1800px;
+          height: 50px;
+          border-radius: 1000px;
         }
     </style>
     
