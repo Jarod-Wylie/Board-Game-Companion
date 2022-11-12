@@ -131,8 +131,8 @@
         }
 
         #Generate-Button {
-          width: 1800px;
-          height: 50px;
+          width: 95%;
+          font-size: 50px;
           border-radius: 1000px;
         }
     </style>
