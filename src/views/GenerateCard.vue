@@ -1,12 +1,13 @@
 <script setup>
-    import UserNameInput from "../components/UserNameInput.vue";
-    import RowContainerWithColor from "../components/RowContainerWithColor.vue";
-    import RowContainer from "../components/RowContainer.vue";
-    import SignInBox from "../components/SignInBox.vue";
-    import { onMounted, ref } from 'vue';
+//import vue components
+import UserNameInput from "../components/UserNameInput.vue";
+import RowContainerWithColor from "../components/RowContainerWithColor.vue";
+import RowContainer from "../components/RowContainer.vue";
+import SignInBox from "../components/SignInBox.vue";
+import RetrieveRulesFromFireStore from "../components/RetrieveRulesFromFireStore.vue";
 
-    
-    
+import { onMounted, ref } from 'vue';
+
 
 //    Add three different objects to the ChoiceArray
     var ChoiceArray = ref([]);
@@ -14,14 +15,21 @@
     ChoiceArray.value.push({Type:'null',  Priority: null, Choice:'b. ', Description:'', HPEffect: null, AddtionalRules:''})
     ChoiceArray.value.push({Type:'null',  Priority: null, Choice:'c. ', Description:'', HPEffect: null, AddtionalRules:''})
     
-    var AddtionalRulesArray = [
+//  Add Rules to AdditionRulesArray    
+    var AddtionalRulesArray = ref([
         "Player with the most RED tokens may now hide their RED tokens.",
         "Player with the most RED tokens may make dictate the choice of the next event."
-    ]
+    ]);
 
+  function RetrievedRules(value)
+    {
+      AddtionalRulesArray.value = AddtionalRulesArray.value.concat(value.value)
+      console.log('child values:', AddtionalRulesArray)
+    }
     
     function assign() {
-        
+
+        console.log('ADRules:', AddtionalRulesArray)
         // Randomly select values for HPEffect
         var DenyHPEffect = Math.floor(Math.random() * 50);
         var HPEffect1 = Math.floor(Math.random() * 10);
@@ -33,7 +41,7 @@
         var ValuePoints2 = Math.floor(Math.random() * 2);
         
         
-        // Randomey assign an Additional Rule
+        // Randomly assign an Additional Rule
         var DenyAdditionalRule = '';
         var AdditionalRule1 = '';
         var AdditionalRule2 = '';
@@ -41,17 +49,19 @@
         
         // probablitly of presenting a rule
         var probablitlyValue = Math.floor(Math.random() * 100);
-        if (probablitlyValue < 10) 
+        console.log('prob:', probablitlyValue);
+        if (probablitlyValue <= 110) 
         { 
-            var ruleIndex = Math.floor(Math.random() * AddtionalRulesArray.length);
-            DenyAdditionalRule = AddtionalRulesArray[ruleIndex]
+            var ruleIndex = Math.floor(Math.random() * AddtionalRulesArray.value.length);
+            console.log('ruleIndex:', ruleIndex );
+            DenyAdditionalRule = AddtionalRulesArray.value[ruleIndex]
         }
 
 
         
         // Randomly Select priority of the Deny Type choice
         var priority = Math.floor(Math.random() * 3);
-        ChoiceArray.value[priority] = {Type: 'Deny', Priority: priority, Choice: 'a. ', HPEffect: DenyHPEffect, cssColoredText: 'color: red', Color: 'RED', ValuePoints: DenyValuePoints, Description: 'Deny it is happening', AddtionalRules:''}
+        ChoiceArray.value[priority] = {Type: 'Deny', Priority: priority, Choice: 'a. ', HPEffect: DenyHPEffect, cssColoredText: 'color: red', Color: 'RED', ValuePoints: DenyValuePoints, Description: 'Deny it is happening', AddtionalRules:DenyAdditionalRule}
 
         // Priority of the other two choices is conditional to the Deny choice priority
         if(priority == 0)
@@ -77,6 +87,9 @@
     
     <template>
       <h1>Generate Card</h1>
+      <Suspense>
+        <RetrieveRulesFromFireStore @retrivedRules="RetrievedRules"></RetrieveRulesFromFireStore>
+      </Suspense>
       <RowContainerWithColor>
         <h2>Pandemic </h2>
         <!-- <UserNameInput></UserNameInput> -->
