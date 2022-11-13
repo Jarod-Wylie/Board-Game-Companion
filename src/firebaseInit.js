@@ -18,7 +18,7 @@
 //   measurementId: "G-5TT75JM4QR"
 // };
 
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-// // export default firebase.initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+// export default firebase.initializeApp(firebaseConfig);

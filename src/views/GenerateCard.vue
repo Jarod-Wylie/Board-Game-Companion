@@ -132,7 +132,7 @@
 
         #Generate-Button {
           width: 95%;
-          font-size: 50px;
+          font-size: 20px;
           border-radius: 1000px;
         }
     </style>

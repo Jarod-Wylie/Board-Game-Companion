@@ -1,4 +1,5 @@
 <script setup>
+import FirestoreTestButton from "../components/firestoreTestButton.vue";
 import HelloWorld from "../components/HelloWorld.vue";
 import LogInButton from "../components/LogInButton.vue";
 
@@ -7,7 +8,10 @@ import LogInButton from "../components/LogInButton.vue";
 <template>
 
   <h1>This is an about page</h1>
-  <LogInButton></LogInButton>
+  <Suspense>
+    <FirestoreTestButton></FirestoreTestButton>
+  </Suspense>
+  <!-- <LogInButton></LogInButton> -->
   <HelloWorld/>
 
 <div id="content">

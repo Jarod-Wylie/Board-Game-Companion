@@ -2,62 +2,59 @@
 
 import { RouterLink, RouterView } from "vue-router";
 import Title from "@/components/Title.vue";
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import { ref } from 'vue'
+import { Suspense } from "vue";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { collection, getDocs, getDoc } from "firebase/firestore"; 
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyD9SUohpF_TVy_dqFX-no-2ZBOl8YKmB8Q",
-//   authDomain: "board-game-companio.firebaseapp.com",
-//   databaseURL: "https://board-game-companio-default-rtdb.firebaseio.com",
-//   projectId: "board-game-companio",
-//   storageBucket: "board-game-companio.appspot.com",
-//   messagingSenderId: "408109557278",
-//   appId: "1:408109557278:web:4e84d110280ddb72dd700f",
-//   measurementId: "G-5TT75JM4QR"
-// };
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://firebase.google.com/docs/web/learn-more#config-object
+const firebaseConfig = {
+  apiKey: "AIzaSyD9SUohpF_TVy_dqFX-no-2ZBOl8YKmB8Q",
+  authDomain: "board-game-companio.firebaseapp.com",
+  databaseURL: "https://board-game-companio-default-rtdb.firebaseio.com",
+  projectId: "board-game-companio",
+  storageBucket: "board-game-companio.appspot.com",
+  messagingSenderId: "408109557278",
+  appId: "1:408109557278:web:4e84d110280ddb72dd700f",
+  measurementId: "G-5TT75JM4QR"
+};
 
-// const app = initializeApp(firebaseConfig);
-// const dbBlah = getFirestore(app);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
-// async function getCities(db) {
-//   const citiesCol = collection(db, 'users');
-//   const citySnapshot = await getDocs(citiesCol);
-//   const cityList = citySnapshot.docs.map(doc => doc.data());
-//   console.log(cityList[0].UserName)
-//   blah = cityList[0].UserName
-//   return cityList;
+
+// Initialize Cloud Firestore and get a reference to the service
+const db = getFirestore(app);
+console.log('db:', db)
+
+// const docRef = doc(db, "users", 'ZQad1kxov80lGDx8lYPy');
+// const docSnap = await getDoc(docRef);
+
+// if (docSnap.exists()) {
+//   console.log("Document data:", docSnap.data());
+// } else {
+//   // doc.data() will be undefined in this case
+//   console.log("No such document!");
 // }
 
-// var blah = ref(0)
+  
+  //   const querySnapshot = await (getDocs(collection(db, "users")));
+  //   console.log(querySnapshot)
+  // querySnapshot.forEach((doc) => {
+  //   return (console.log(`${doc.id}  ${doc.data().UserName}`));
+  //   return (doc.data().UserName);
+  // });
 
-// Vue.use(firestorePlugin)
-
-  // readEmployees() 
-  // {
-  //     this.employeesData = [];
-  //     db.collection("employees")
-  //       .get()
-  //       .then((querySnapshot) => {
-  //         querySnapshot.forEach((doc) => {
-  //           this.employeesData.push({
-  //             id: doc.id,
-  //             name: doc.data().UserName
-  //           });
-  //           console.log(doc.id, " => ", doc.data());
-  //         });
-  //       })
-  //       .catch((error) => {
-  //         console.log("Error getting documents: ", error);
-  //       });
-  //   }
 
 </script>
 
 <template>
   <header>
     <Title></Title>
+<Suspense>
 
+</Suspense>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
