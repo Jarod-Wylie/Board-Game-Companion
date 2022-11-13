@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from "vue";
+
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { collection, getDocs, getDoc } from "firebase/firestore"; 
@@ -25,14 +27,15 @@ const db = getFirestore(app);
 console.log('db:', db)
 
 
-  function testBlah() {
-    console.log('BLAH');
-    snapshot.forEach((doc) => {
- (console.log(`${doc.id}  ${doc.data().UserName}`))});
+const RuleArray = ref([]);
+
+function testBlah() {
+    console.log('RuleArray:', RuleArray);
 }
 
+
 try {
-   var snapshot = await (getDocs(collection(db, "users"))) 
+   var snapshot = await (getDocs(collection(db, "GovernanceRuleBank"))) 
    console.log(snapshot);
 }
 
@@ -40,7 +43,8 @@ catch (e) {
 console.log("Error getting cached document:", e);
 }
 snapshot.forEach((doc) => {
-return (console.log(`${doc.id}  ${doc.data().UserName}`));
+  RuleArray.value.push(doc.data().RuleDescription)
+return (console.log(`${doc.id}  ${doc.data().RuleDescription}`));
 });
 </script>
 

@@ -5,6 +5,9 @@ service cloud.firestore {
     match /users/{UserName} {
     allow read;
     }
+    match /GovernanceRuleBank/{RuleDescription} {
+    allow read;
+    }
 
 
 
